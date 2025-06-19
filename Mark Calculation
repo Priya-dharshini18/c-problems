@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    char x[100];
+    int a,b,c,d,e;
+    float y;
+    scanf("%s\n%d\n%d\n%d\n%d\n%d",x,&a,&b,&c,&d,&e);
+    y=(a+b+c+d+e);
+    printf("Name of the Student:%s\nTotal marks:%.0f\nAverage marks:%.1f\n",x,y,y/5);
+    return 0;
+}
