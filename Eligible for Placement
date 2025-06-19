@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int a,b;
+    char s[100];
+    scanf("%s\n%d\n%d\n",s,&b,&a);
+    if((b==1&&a>=70)||((b==1||b==2)&&a>=75))
+    {
+        printf("Name of the Student:%s\n%s is Eligible for Placement",s,s);
+    }
+    else
+    {
+        printf("Name of the Student:%s\n%s is Not Eligible for Placement",s,s);
+    }
+    return 0;
+}
