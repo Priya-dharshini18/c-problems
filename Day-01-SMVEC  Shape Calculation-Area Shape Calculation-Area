@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,l,b,r,d,h;
+    scanf("%d\n%d\n%d\n%d\n%d\n%d",&a,&l,&b,&r,&d,&h);
+    float PI=3.1416;
+    int sq =a*a;
+    int re =l*b;
+    float ci =PI*r*r;
+    float tri =0.5*d*h;
+    printf("Area of Square=%d\nArea of Rectangle=%d\nArea of Circle=%.2f\nArea of Triangle=%.0f\n",sq,re,floor(ci*100)/100,tri);
+    
+    
+    
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
