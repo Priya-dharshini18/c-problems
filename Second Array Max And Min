@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int compare_desc(const void *a, const void *b) {
+    return (*(int*)b - *(int*)a);
+}
+
+int compare_asc(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int main() {
+    int length;
+    scanf("%d", &length);
+    int arr[length];
+
+    for (int i = 0; i < length; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int even_count = (length + 1) / 2;
+    int odd_count = length / 2;
+    int even[even_count], odd[odd_count];
+    int e = 0, o = 0;
+
+    for (int i = 0; i < length; i++) {
+        if (i % 2 == 0) {
+            even[e++] = arr[i];
+        } else {
+            odd[o++] = arr[i];
+        }
+    }
+
+    qsort(even, even_count, sizeof(int), compare_desc);
+    qsort(odd, odd_count, sizeof(int), compare_asc);
+
+    int result = even[1] + odd[1];
+    printf("Sum=%d\n", result);
+    return 0;
+}
