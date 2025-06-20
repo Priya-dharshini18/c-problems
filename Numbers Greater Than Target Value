@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+    
+int compareAsc(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+int main() {
+    int n, target, i, sum = 0, count = 0;
+
+    
+    scanf("%d", &n);
+    int arr[n];
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    
+    scanf("%d", &target);
+
+    qsort(arr, n, sizeof(int), compareAsc);
+    printf("The Target values are");
+    for (i = 0; i < n; i++) {
+        if (arr[i] > target) {
+            printf(" %d", arr[i]);
+            sum += arr[i];
+            count++;
+        }
+    }
+
+    if (count == 0) {
+        printf("\nNo values greater than target.\n");
+    } else 
+    {
+        float avg = (float)sum / count;
+        printf("\nsum of value is %d\n", sum);
+        printf("Average of the value is %.1f\n", avg);
+    }
+
+    return 0;
+}
+
