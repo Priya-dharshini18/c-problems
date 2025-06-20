@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    double s,d,t;
+    scanf("%lf",&s);
+    scanf("%lf",&d);
+    scanf("%lf",&t);
+    
+    double time=(d*3600)/s;
+    
+    if(time<t)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No\n");
+    }
+    return 0;
+}
